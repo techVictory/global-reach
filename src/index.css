@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* ── Global Reset ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #eaebe2;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Navbar responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Hide desktop links */
+  nav .desktop-links {
+    display: none !important;
+  }
+  /* Show hamburger */
+  nav .hamburger-btn {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Always show desktop links */
+  nav .desktop-links {
+    display: flex !important;
+  }
+  /* Hide hamburger */
+  nav .hamburger-btn {
+    display: none !important;
+  }
+  /* Hide mobile menu even if state is open (resize edge case) */
+  nav .mobile-menu {
+    display: none !important;
+  }
+}
