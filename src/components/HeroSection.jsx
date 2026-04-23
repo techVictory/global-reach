@@ -60,7 +60,7 @@ export default function HeroSection() {
       >
         {/* Image */}
         <img
-          src="/assets/kids.png"
+          src="/assets/kids1.webp"
           alt="Children smiling"
           className="w-full object-cover"
           style={{
