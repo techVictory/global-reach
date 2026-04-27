@@ -32,7 +32,7 @@ export default function HeroSection() {
           <Link
             key={to}
             to={to}
-            className="no-underline flex items-center justify-center text-center transition-opacity duration-200 hover:opacity-80"
+            className="hero-btn no-underline flex items-center justify-center text-center"
             style={{
               backgroundColor: color,
               border: '2px solid black',
@@ -140,6 +140,23 @@ export default function HeroSection() {
     countless lives around the world with the Love of Christ.
   </p>
 </div>
+<style>
+{`
+  .hero-btn {
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .hero-btn:hover {
+    transform: translateY(-1.5px) scale(1.01);
+    box-shadow: 0 5px 9px rgba(0,0,0,0.12);
+  }
+
+  .hero-btn:active {
+    transform: translateY(0px) scale(0.99);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.10);
+  }
+`}
+</style>
     </section>
   )
 }

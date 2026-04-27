@@ -27,13 +27,13 @@ export default function MissionBanner() {
   return (
     <section
       className="w-full"
-      style={{ backgroundColor: '#eaebe2', padding: '0 48px 64px' }}
+      style={{ backgroundColor: '#eaebe2', padding: '32px 48px 0' }}
     >
       {/* ── Centered width-limited wrapper ── */}
       <div
         style={{
           width: '100%',
-          maxWidth: '1200px',
+          maxWidth: '1320px',
           margin: '0 auto',
         }}
       >

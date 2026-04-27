@@ -55,92 +55,103 @@ export default function TripSignupSection() {
         >
           {/* Buttons row */}
           <div
-            className="flex flex-wrap items-center justify-center"
-            style={{
-              gap: 'clamp(20px, 3vw, 48px)',
-            }}
-          >
-            {actions.map(({ label, href }) => (
-              <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="no-underline flex items-center justify-center text-center transition-opacity duration-200 hover:opacity-80"
-                style={{
-                  backgroundColor: '#02f590',
-                  border: '2px solid black',
-                  borderRadius: '999px',
-                  padding: 'clamp(6px, 1.2vw, 10px) 34px',
-                  minHeight: 'clamp(52px, 6vw, 72px)',
-                  minWidth: 'clamp(220px, 24vw, 390px)',
-                  fontFamily: '"DM Mono", monospace',
-                  fontSize: 'clamp(14px, 1.4vw, 20px)',
-                  fontWeight: 700,
-                  letterSpacing: '0.04em',
-                  color: '#000000',
-                  whiteSpace: 'pre-line',
-                  textAlign: 'center',
-                  lineHeight: 1.15,
-                }}
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-
-          {/* Step row */}
-          <div
-            className="flex items-center"
-            style={{
-              gap: '8px',
-              marginTop: '-2px',
-            }}
-          >
-            <span
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                fontSize: 'clamp(18px, 3vw, 32px)',
-                fontWeight: 800,
-                lineHeight: 1,
-                color: '#1a1a1a',
-                letterSpacing: '-0.03em',
-              }}
-            >
-              STEP 1
-            </span>
-
-            <svg
-  width="78"
-  height="44"
-  viewBox="0 0 78 44"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
+  className="flex flex-wrap items-start justify-center"
   style={{
-    display: 'block',
-    flexShrink: 0,
-    overflow: 'visible',
+    gap: 'clamp(20px, 3vw, 48px)',
   }}
-  aria-hidden="true"
 >
-  <path
-    d="M4 34C18 40 36 39 50 29C58 23 63 16 67 8"
-    stroke="#1a1a1a"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  />
-  <path
-    d="M60 9L67 8L66 15"
-    stroke="#1a1a1a"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  />
-</svg>
-          </div>
+  {actions.map(({ label, href }, index) => (
+    <div
+      key={href}
+      className="flex flex-col items-start"
+      style={{
+        gap: 'clamp(12px, 2vw, 24px)',
+      }}
+    >
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="trip-btn no-underline flex items-center justify-center text-center"
+        style={{
+          backgroundColor: '#02f590',
+          border: '2px solid black',
+          borderRadius: '999px',
+          padding: 'clamp(6px, 1.2vw, 10px) 34px',
+          minHeight: 'clamp(52px, 6vw, 72px)',
+          minWidth: 'clamp(220px, 24vw, 390px)',
+          fontFamily: '"DM Mono", monospace',
+          fontSize: 'clamp(14px, 1.4vw, 20px)',
+          fontWeight: 700,
+          letterSpacing: '0.04em',
+          color: '#000000',
+          whiteSpace: 'pre-line',
+          textAlign: 'center',
+          lineHeight: 1.15,
+        }}
+      >
+        {label}
+      </a>
+
+      {index === 0 && (
+        <div
+          className="flex items-center"
+          style={{
+            gap: '8px',
+            paddingLeft: '4px',
+          }}
+        >
+          <span
+            style={{
+              fontFamily: '"DM Sans", sans-serif',
+              fontSize: 'clamp(18px, 3vw, 32px)',
+              fontWeight: 800,
+              lineHeight: 1,
+              color: '#1a1a1a',
+              letterSpacing: '-0.03em',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            STEP 1
+          </span>
+
+          <img
+            src="/arrow.png"
+            alt=""
+            aria-hidden="true"
+            style={{
+              width: 'clamp(36px, 5vw, 64px)',
+              height: 'auto',
+              display: 'block',
+              transform: 'translateY(-6px)',
+              flexShrink: 0,
+            }}
+          />
+        </div>
+      )}
+    </div>
+  ))}
+</div>
         </div>
       </div>
+      <style>
+      {`
+  .trip-btn {
+    transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+  }
+
+  .trip-btn:hover {
+    transform: translateY(-1.5px) scale(1.01);
+    box-shadow: 0 5px 9px rgba(0,0,0,0.12);
+    filter: saturate(1.05);
+  }
+
+  .trip-btn:active {
+    transform: translateY(0px) scale(0.99);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.10);
+  }
+`}
+</style>
     </section>
   )
 }
