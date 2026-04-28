@@ -41,7 +41,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <a
               href="https://victory.com"
-              className="flex items-center gap-2.5 no-underline text-black text-[13px] font-bold tracking-[0.05em] whitespace-nowrap transition-opacity duration-200 hover:opacity-60"
+              className="flex items-center gap-2.5 no-underline text-black text-[13px] font-bold tracking-wider whitespace-nowrap transition-opacity duration-200 hover:opacity-60"
             >
               <span className="text-base leading-none">←</span>
               <span>GO BACK TO VICTORY.COM</span>
@@ -78,18 +78,18 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(prev => !prev)}
             aria-label="Toggle menu"
-            className="xl:hidden flex flex-col justify-center items-center gap-[5px] bg-transparent border-none cursor-pointer p-2 w-10 h-10"
+            className="xl:hidden flex flex-col justify-center items-center gap-1.25 bg-transparent border-none cursor-pointer p-2 w-10 h-10"
           >
             <span
-              className="block w-[22px] h-[2px] bg-black rounded-sm transition-transform duration-250 ease-in-out origin-center"
+              className="block w-5.5 h-0.5 bg-black rounded-sm transition-transform duration-250 ease-in-out origin-center"
               style={{ transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }}
             />
             <span
-              className="block w-[22px] h-[2px] bg-black rounded-sm transition-all duration-250 ease-in-out origin-center"
+              className="block w-5.5 h-0.5 bg-black rounded-sm transition-all duration-250 ease-in-out origin-center"
               style={{ transform: menuOpen ? 'scaleX(0)' : 'none', opacity: menuOpen ? 0 : 1 }}
             />
             <span
-              className="block w-[22px] h-[2px] bg-black rounded-sm transition-transform duration-250 ease-in-out origin-center"
+              className="block w-5.5 h-0.5 bg-black rounded-sm transition-transform duration-250 ease-in-out origin-center"
               style={{ transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }}
             />
           </button>
