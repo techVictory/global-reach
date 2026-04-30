@@ -1,3 +1,9 @@
+import SpecialProjectsHero from '../components/SpecialProjectsHero'
+
 export default function SpecialProjects() {
-  return <div>Special Projects</div>
+  return (
+    <>
+      <SpecialProjectsHero />
+    </>
+  )
 }

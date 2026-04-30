@@ -1,3 +1,13 @@
+import MissionariesHero from '../components/MissionariesHero'
+import MissionariesIntro from '../components/MissionariesIntro'
+import MissionariesCountriesGrid from '../components/MissionariesCountriesGrid'
+
 export default function Missionaries() {
-  return <div>Missionaries</div>
+  return (
+    <>
+      <MissionariesHero />
+      <MissionariesIntro />
+      <MissionariesCountriesGrid />
+    </>
+  )
 }
